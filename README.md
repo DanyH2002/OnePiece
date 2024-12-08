@@ -1,6 +1,6 @@
 # Onepiece
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0. with version nvm 18.17.0, in addition to including SweetAlert2
 
 ## Development server
 
