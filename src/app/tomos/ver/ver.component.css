@@ -1,124 +1,121 @@
-.song-info-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    background-color: #f5e6d3;
-    padding: 2rem;
-    font-family: 'Inter Tight', sans-serif;
-    
+.tomo-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #f5e6d3;
+  padding: 2rem;
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.tomo-info-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(95, 68, 34, 0.1);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.tomo-header {
+  background-color: #7F1D1D;
+  color: #FFD700;
+  padding: 2rem;
+  text-align: center;
+}
+
+.tomo-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.tomo-number {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+.tomo-details {
+  padding: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #5f4422;
+}
+
+.detail-value {
+  color: #333;
+}
+
+.tomo-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #f9f3e8;
+}
+
+.btn-edit, .btn-delete {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background-color: #aa7e32;
+  color: #ffffff;
+}
+
+.btn-edit:hover {
+  background-color: #de9d2b;
+}
+
+.btn-delete {
+  background-color: #7F1D1D;
+  color: #ffffff;
+}
+
+.btn-delete:hover {
+  background-color: #5C3A3A;
+}
+
+@media (max-width: 600px) {
+  .tomo-info-card {
+    border-radius: 0;
   }
-  
-  .song-info-card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(95, 68, 34, 0.1);
-    width: 100%;
-    max-width: 800px;
-    overflow: hidden;
+
+  .tomo-title {
+    font-size: 2rem;
   }
-  
-  .song-header {
-    background-color: #7F1D1D;
-    color: #FFD700;
-    padding: 2rem;
-    text-align: center;
+
+  .tomo-number {
+    font-size: 1.2rem;
   }
-  
-  .song-title {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .song-artist {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    opacity: 0.9;
-  }
-  
-  .song-details {
-    padding: 2rem;
-  }
-  
+
   .detail-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .detail-label {
-    font-weight: bold;
-    color: #5f4422;
+
+  .tomo-actions {
+    flex-direction: column;
   }
-  
-  .detail-value {
-    color: #333;
-  }
-  
-  .song-actions {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    background-color: #f9f3e8;
-  }
-  
+
   .btn-edit, .btn-delete {
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    width: 100%;
   }
-  
-  .btn-edit {
-    background-color: #aa7e32;
-    color: #ffffff;
-  }
-  
-  .btn-edit:hover {
-    background-color: #de9d2b;
-  }
-  
-  .btn-delete {
-    background-color: #7F1D1D;
-    color: #ffffff;
-  }
-  
-  .btn-delete:hover {
-    background-color: #5C3A3A;
-  }
-  
-  @media (max-width: 600px) {
-    .song-info-card {
-      border-radius: 0;
-    }
-  
-    .song-title {
-      font-size: 2rem;
-    }
-  
-    .song-artist {
-      font-size: 1.2rem;
-    }
-  
-    .detail-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .song-actions {
-      flex-direction: column;
-    }
-  
-    .btn-edit, .btn-delete {
-      width: 100%;
-    }
-  }
-  
-  
+}

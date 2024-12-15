@@ -4,8 +4,12 @@
     <button (click)="buscarTomos()">Buscar</button>
   </div>
   <div class="search-input">
-    <input type="number" [(ngModel)]="tomoNumberQuery" placeholder="Buscar por número de tomo..." (keyup.enter)="filtrarTomos()" />
-    <button (click)="filtrarTomos()">Buscar</button>
+    <input type="number" [(ngModel)]="tomoNumberQuery" placeholder="Buscar por número de tomo..." (keyup.enter)="filtrarTomos('numero_tomo')" />
+    <button (click)="filtrarTomos('numero_tomo')">Buscar</button>
+  </div>
+  <div class="search-input">
+    <input type="date" [(ngModel)]="fechaPublicacionQuery" placeholder="Buscar por fecha de publicación..." (keyup.enter)="filtrarTomos('fecha_publicacion')" />
+    <button (click)="filtrarTomos('fecha_publicacion')">Buscar</button>
   </div>
 </div>
 

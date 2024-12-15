@@ -95,6 +95,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 .search-container {
   display: flex;
   justify-content: center;
@@ -130,6 +131,7 @@
   background-color: #003c8f;
 }
 
-.search-input input[type="number"] {
+.search-input input[type="number"],
+.search-input input[type="date"] {
   width: 200px;
 }

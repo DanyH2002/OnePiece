@@ -36,8 +36,8 @@ export class HttpLaravelServiceService {
     return this.http.get<ApiResponse>(`${this._url}/tomos/search?pregunta=${pregunta}`);
   }
   
-  filtrarTomo(filtro: string): Observable<ApiResponse>{
-    return this.http.get<ApiResponse>(`${this._url}/tomos/filter?numero_tomo=${filtro}`);
+  filtrarTomo(filtro: string, tipoFiltro: string): Observable<ApiResponse>{
+    return this.http.get<ApiResponse>(`${this._url}/tomos/filter?${tipoFiltro}=${filtro}`);
   }
 
   
