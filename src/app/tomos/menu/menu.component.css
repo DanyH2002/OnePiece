@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto+Slab:wght@400;700&display=swap');
+
+.navbar {
+  background: linear-gradient(to bottom, #135d8b, #2d55a0);
+  padding: -200px 30px;
+  font-family: 'Roboto Slab', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: -40px auto;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Separación entre el logo y el centro */
+}
+
+.brand-text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFD700;
+  font-family: 'Pirata One', cursive;
+}
+
+.navbar-center {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0 30px; /* Separación a los lados de la imagen */
+}
+
+.navbar-logo {
+  width: 180px; /* Aumenta el tamaño del logo */
+  height: auto;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.menu-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #f8e15e;
+  transition: all 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: #FFF;
+  transform: translateY(-3px);
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+.active-link {
+  color: #FFF !important;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Separación entre el input y los elementos anteriores */
+}
+
+.search-input {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f8e15e;
+  color: #2d55a0;
+  width: 180px; /* Tamaño del input */
+}
+
+.search-input:focus {
+  background-color: #fff;
+  border: 2px solid #2d55a0;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navbar-center {
+    margin: 15px 0;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+  }
+
+  .navbar-right {
+    margin-top: 15px;
+  }
+
+  .search-input {
+    width: 100%; /* Hacer el input más grande en pantallas pequeñas */
+  }
+}

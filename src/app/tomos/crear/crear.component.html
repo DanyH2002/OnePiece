@@ -1,0 +1,65 @@
+<div class="form-container">
+  <div class="form-card">
+    <div class="form-header">
+      <h1 class="form-title">Agregar Tomo</h1>
+    </div>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="tomo-form">
+      <!-- ID (oculto) -->
+      <input type="hidden" formControlName="id">
+
+      <div class="form-group">
+        <label class="form-label">Número del Tomo</label>
+        <input type="number" class="form-input" formControlName="numero_tomo" [ngClass]="{'is-invalid': f['numero_tomo'].invalid && f['numero_tomo'].touched}">
+        <div class="error-message" *ngIf="f['numero_tomo'].invalid && f['numero_tomo'].touched">
+          <small *ngIf="f['numero_tomo']?.errors?.['required']">El número del tomo es obligatorio.</small>
+          <small *ngIf="f['numero_tomo']?.errors?.['min']">El número del tomo debe ser mayor que 0.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Título</label>
+        <input class="form-input" formControlName="titulo" [ngClass]="{'is-invalid': f['titulo'].invalid && f['titulo'].touched}">
+        <div class="error-message" *ngIf="f['titulo'].invalid && f['titulo'].touched">
+          <small *ngIf="f['titulo']?.errors?.['required']">El título es obligatorio.</small>
+          <small *ngIf="f['titulo']?.errors?.['maxlength']">El título no debe exceder los 255 caracteres.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Capítulos Incluidos</label>
+        <input class="form-input" formControlName="capitulos_incluidos" [ngClass]="{'is-invalid': f['capitulos_incluidos'].invalid && f['capitulos_incluidos'].touched}">
+        <div class="error-message" *ngIf="f['capitulos_incluidos'].invalid && f['capitulos_incluidos'].touched">
+          <small *ngIf="f['capitulos_incluidos']?.errors?.['required']">Los capítulos incluidos son obligatorios.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Sinopsis</label>
+        <textarea class="form-input" formControlName="sinopsis" rows="3" [ngClass]="{'is-invalid': f['sinopsis'].invalid && f['sinopsis'].touched}"></textarea>
+        <div class="error-message" *ngIf="f['sinopsis'].invalid && f['sinopsis'].touched">
+          <small *ngIf="f['sinopsis']?.errors?.['required']">La sinopsis es obligatoria.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Fecha de Publicación</label>
+        <input type="date" class="form-input" formControlName="fecha_publicacion" [ngClass]="{'is-invalid': f['fecha_publicacion'].invalid && f['fecha_publicacion'].touched}">
+        <div class="error-message" *ngIf="f['fecha_publicacion'].invalid && f['fecha_publicacion'].touched">
+          <small *ngIf="f['fecha_publicacion']?.errors?.['required']">La fecha de publicación es obligatoria.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Portada (URL)</label>
+        <input class="form-input" formControlName="portada" [ngClass]="{'is-invalid': f['portada'].invalid && f['portada'].touched}">
+        <div class="error-message" *ngIf="f['portada'].invalid && f['portada'].touched">
+          <small *ngIf="f['portada']?.errors?.['required']">La URL de la portada es obligatoria.</small>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>

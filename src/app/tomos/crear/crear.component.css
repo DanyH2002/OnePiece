@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto+Slab:wght@400;700&display=swap');
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('https://example.com/parchment-texture.jpg');
+  background-size: cover;
+  padding: 2rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.form-card {
+  background-color: rgba(255, 248, 220, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border: 8px solid #8B4513;
+}
+
+.form-header {
+  background-color: #8B4513;
+  color: #FFD700;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #FFD700;
+}
+
+.form-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Pirata One', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tomo-form {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #8B4513;
+  font-size: 1.1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #8B4513;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #FFD700;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.form-input.is-invalid {
+  border-color: #8B0000;
+}
+
+.error-message {
+  color: #8B0000;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-submit {
+  background-color: #8B4513;
+  color: #FFD700;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Pirata One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+  background-color: #A0522D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .form-card {
+    border-radius: 0;
+    border-width: 4px;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+
+  .tomo-form {
+    padding: 1.5rem;
+  }
+}
+

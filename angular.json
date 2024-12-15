@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "onepiece": {
+    "proyectoNuevo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/onepiece",
+            "outputPath": "dist/proyecto-nuevo",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "onepiece:build:production"
+              "buildTarget": "proyectoNuevo:build:production"
             },
             "development": {
-              "buildTarget": "onepiece:build:development"
+              "buildTarget": "proyectoNuevo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "onepiece:build"
+            "buildTarget": "proyectoNuevo:build"
           }
         },
         "test": {

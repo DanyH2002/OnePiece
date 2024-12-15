@@ -1,5 +1,5 @@
 {
-  "name": "onepiece",
+  "name": "proyecto-nuevo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,11 +21,12 @@
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.14.5",
     "tslib": "^2.3.0",
+    "uuid": "^11.0.2",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.0",
-    "@angular/cli": "^17.3.0",
+    "@angular-devkit/build-angular": "^17.3.8",
+    "@angular/cli": "^17.3.8",
     "@angular/compiler-cli": "^17.3.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",

@@ -1,0 +1,26 @@
+<div class="tomo-info-container">
+  <div class="tomo-info-card">
+    <div class="tomo-header">
+      <h1 class="tomo-title">{{Tomo?.titulo}}</h1>
+      <p class="tomo-number">Tomo #{{Tomo?.numero_tomo}}</p>
+    </div>
+    <div class="tomo-details">
+      <div class="detail-item">
+        <span class="detail-label">ID:</span>
+        <span class="detail-value">{{Tomo?.id}}</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Sinopsis:</span>
+        <span class="detail-value">{{Tomo?.sinopsis}}</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Fecha de Publicación:</span>
+        <span class="detail-value">{{Tomo?.fecha_publicacion }}</span>
+      </div>
+    </div>
+    <div class="tomo-actions">
+      <button class="btn-edit" [routerLink]="['/tomos/actualizar', Tomo?.id]">Editar</button>
+      <button class="btn-delete" (click)="borrar()">Eliminar</button>
+    </div>
+  </div>
+</div>

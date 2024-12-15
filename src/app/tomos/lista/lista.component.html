@@ -1,0 +1,23 @@
+<div class="search-container">
+  <div class="search-input">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Buscar tomos por título..." (keyup.enter)="buscarTomos()" />
+    <button (click)="buscarTomos()">Buscar</button>
+  </div>
+  <div class="search-input">
+    <input type="number" [(ngModel)]="tomoNumberQuery" placeholder="Buscar por número de tomo..." (keyup.enter)="filtrarTomos()" />
+    <button (click)="filtrarTomos()">Buscar</button>
+  </div>
+</div>
+
+<div class="tomo-cards-container">
+  <div class="tomo-card" *ngFor="let tomo of tomos">
+    <div class="tomo-card-image">
+      <img [src]="tomo.portada" [alt]="'Portada de ' + tomo.titulo">
+    </div>
+    <div class="tomo-card-content">
+      <h3 class="tomo-titulo">{{ tomo.titulo }}</h3>
+      <span class="tomo-numero">Tomo N°: {{ tomo.numero_tomo }}</span>
+      <button class="btn-ver" [routerLink]="['/tomos/ver', tomo.id]">Ver detalles</button>
+    </div>
+  </div>
+</div>
